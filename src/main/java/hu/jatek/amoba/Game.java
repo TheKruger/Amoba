@@ -17,6 +17,7 @@ public class Game {
             int c = sc.nextInt() - 1;
 
             if (!board.place(r, c, current)) {
+                clearScreen();
                 System.out.println("Rossz lépés!");
                 continue;
             }
@@ -34,8 +35,15 @@ public class Game {
             }
 
             current = (current == 'X') ? 'O' : 'X';
+
+            clearScreen();
         }
 
         sc.close();
+    }
+
+    private void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }
