@@ -1,3 +1,9 @@
 target/
 *.class
 *.log
+logs/*
+*.iml
+.idea/
+*.jar
+amoba.db
+board.txt
